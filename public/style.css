@@ -1,22 +1,13 @@
 body {
-    background: linear-gradient(90.9deg, rgb(3, 195, 195) 0.3%, rgb(37, 84, 112) 87.8%);
-}
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-attachment: fixed; /* Fixes the background */
+    color: #ffffff;
+    height: 100vh;
+}  
 
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 .nav_container {
-    display: inline-flex;
+    display:inline-flex;
     justify-content: flex-end;
     margin-left: 800px;
 }
@@ -31,11 +22,13 @@ nav h2 a {
     font-size: 1.25rem;
     letter-spacing: 5px;
     color: #ffffff; 
-    text-shadow: 2px 4px 10px rgba(0, 255, 255, 0.8); 
+    /* text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);  */
     animation: glow 1s ease-in-out infinite alternate; 
 }
 
-ul {
+
+
+nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -43,7 +36,7 @@ ul {
     width: 50%;
 }
 
-li {
+nav li {
     padding-right: 200px;
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -52,10 +45,10 @@ li {
 }
 
 .nav-item {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
-                0 0 30px rgba(0, 255, 255, 0.3),
-                0 0 40px rgba(0, 255, 255, 0.3),
-                0 0 50px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
+                0 0 30px rgba(0, 255, 255, 0.2),
+                0 0 40px rgba(0, 255, 255, 0.2),
+                0 0 50px rgba(0, 255, 255, 0.2);
 }
 
 .nav-item > a {
@@ -66,7 +59,7 @@ li {
 }
 
 .nav-item:hover {
-    border: 2px solid rgba(14, 72, 222, 0.);
+    border: 2px solid rgba(14, 72, 222, 0.4);
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
                 0 0 30px rgba(0, 255, 255, 0.6),
@@ -78,7 +71,7 @@ li {
 }
 
 .nav-item > a:hover {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
 
 }
@@ -97,12 +90,14 @@ li {
     left: 65%;
     top: 255px;
 
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4),
-                0 0 30px rgba(0, 255, 255, 0.4),
-                0 0 40px rgba(0, 255, 255, 0.4),
-                0 0 50px rgba(0, 255, 255, 0.4); 
-                        
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.3),
+                0 0 50px rgba(0, 255, 255, 0.3); 
+
+
     transition: box-shadow 0.3s ease-in-out;
+    animation: glow 2s ease-in-out 1s infinite ;
 
 }
 
@@ -131,8 +126,11 @@ li {
 
 
 span {
+    padding-left: 10px;
     color: rgba(0, 255, 255, 0.8);  
-    text-shadow: 10px 5px 8px rgba(0, 255, 255, 0.8)                                                                                                                                                                                                        
+    /* text-shadow: 10px 5px 8px rgba(0, 255, 255, 0.8)                                                                                                                                                                                                         */
+    text-shadow: 10px 5px 8px rgba(0, 0, 0, 0.8)                                                                                                                                                                                                        
+
 }
 
 .info {
@@ -144,19 +142,294 @@ span {
 }
 @keyframes glow {
     from {
-        text-shadow: 0 0 50px rgba(0, 255, 255, 0.8) ;
+        text-shadow: 0 0 20px rgb(0, 255,255,0.6) ;
     }
     to {
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8) ;
+        text-shadow: 0 0 20px rgba(0, 255, 255, 1) ;
     }
 } 
-.Footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333333; /* Example background color */
-    color: #ffffff; /* Example text color */
+
+.title{
     text-align: center;
-    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    /* margin-top: 4px; */
+
 }
+.subtitle{
+    text-align: center;
+    display: flex;
+    justify-content:left;
+    padding-left: 40px;
+
+
+}
+.subtitle >p{
+    border-top-left-radius: 60px;
+    border-top-right-radius: 10px ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 60px;
+
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                0 0 30px rgba(0, 255, 255, 0.1),
+                0 0 40px rgba(0, 255, 255, 0.1),
+                0 0 50px rgba(0, 255, 255, 0.1); 
+    border: 1px solid #ffffff;
+    padding: 20px;
+    font-size: 2rem;
+    text-shadow: 4px 5px 20px rgba(0, 0, 0, 1);
+    
+
+}
+.title > p {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 60px ;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 10px;
+    font-size: 2.5rem;
+    padding: 5px;
+    width: 300px;
+    color: #ffffff;
+
+
+
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.3),
+                0 0 50px rgba(0, 255, 255, 0.3); 
+
+    border: 1px solid white;
+    
+
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    margin: 10px auto; 
+    text-align: center; 
+}   
+
+ .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(0, 0, 0, 0.3); 
+    border-radius: 30px;
+    align-items: center;
+    margin-bottom: 100px;
+    height: 700px;
+    width: 500px;
+    overflow: hidden;
+ }
+ .card > img 
+ {
+    border-radius: 40px;
+    object-fit:fill;
+    padding: 30px;
+    height: 200px;
+    width:400px;
+ }
+
+ 
+.card span 
+{
+    text-align: center; 
+    font-size: 1.55rem;
+}
+.project-details
+{
+    padding: 20px;
+    font-size: 1.5rem;
+}
+.hoveredDisplay{
+     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #ffffff;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+
+}
+.hoveredDisplay p {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+.hoveredDisplay ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 5px;
+    gap: 15px; 
+}
+
+.hoveredDisplay li {
+    font-size: 1rem;
+    list-style: none;
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    background-color: rgba(0, 255, 255, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.hoveredDisplay li:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 255, 255, 0.4); 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); 
+}
+
+
+.card:hover .hoveredDisplay {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    padding: 20px; 
+    padding-bottom: 50px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: fl ex-start; 
+    align-items: center; 
+    margin: 100px auto; 
+    gap: 50px; 
+    margin : 100px 300px;   
+}
+
+
+
+
+.skillBox
+{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)), center/cover;
+    background-blend-mode: overlay;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.3),
+                0 0 50px rgba(0, 255, 255, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+.skillBox img {
+    
+    position: absolute;
+    height: 100px;
+    width:100px;
+    left:25%;
+    top:25%;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 60%;
+}
+
+.skillBox:hover{
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                0 0 30px rgba(0, 255, 255, 0.8),
+                0 0 40px rgba(0, 255, 255, 0.8),
+                0 0 50px rgba(0, 255, 255, 0.8);
+}
+
+
+
+
+
+.resume-container
+{
+    margin:100px 100px;
+    position: relative;
+    left: 25%;
+    border: 2px solid black;
+    height: 1123px;
+    border-radius: 30px;
+    width: 794px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.3),
+                0 0 50px rgba(0, 255, 255, 0.3);
+}
+
+
+.pdf-book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-embed {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Optional shadow effect */
+}
+
+
+.download-link {
+    position: absolute;
+    top:1453px;
+    left: 875px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 4px inset white;
+    text-decoration: none;
+    color: #ffffff;
+} 
+
+.first-download-link
+{
+    position: absolute;
+    left: 45%;
+    border-radius: 20px;
+    padding: 20px;
+    border: 4px inset white;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.download-link:hover  , .first-download-link:hover{
+    background-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}   

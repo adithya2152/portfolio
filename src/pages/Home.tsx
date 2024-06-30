@@ -12,7 +12,7 @@ export const Home = ()=>{
 
             <div className="Intro">
                 <p>HI!, Myself <span>ADITHYA BHARADWAJ C </span></p>
-                <p>I AM A <span>STUDENT / SOFTWARE DEVELOPER</span></p>
+                <p>I'm   A <span>STUDENT / SOFTWARE DEVELOPER</span></p>
                 <div className="info">
                 <p>Currently pursuing B-TECH at IIITDM Kancheepuram. <br />
                 A passionate enthusiast in the field of web development. <br />
