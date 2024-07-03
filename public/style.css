@@ -9,7 +9,7 @@ body {
 .nav_container {
     display:inline-flex;
     justify-content: flex-end;
-    margin-left: 800px;
+    margin-left: 610px;
 }
 
 nav h2 {
@@ -138,7 +138,7 @@ span {
     font-size: 1.5rem;
     line-height: 1.8;
     color: #ffffff;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* Slightly lighter text shadow */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); 
 }
 @keyframes glow {
     from {
@@ -157,14 +157,38 @@ span {
     /* margin-top: 4px; */
 
 }
+.details_title {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.details_title h1{
+    border-top-left-radius: 60px;
+    border-top-right-radius: 5px ;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 60px;
+    border:1px solid  #ffffff;
+    padding: 20px;
+    width:fit-content;
+    font-size: 2.5rem;
+
+    margin: 50px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+    0 0 30px rgba(0, 255, 255, 0.1),
+    0 0 40px rgba(0, 255, 255, 0.1),
+    0 0 50px rgba(0, 255, 255, 0.1)
+}
 .subtitle{
     text-align: center;
     display: flex;
     justify-content:left;
     padding-left: 40px;
-
-
 }
+
+
 .subtitle >p{
     border-top-left-radius: 60px;
     border-top-right-radius: 10px ;
@@ -299,8 +323,11 @@ span {
     justify-content: space-around;
     margin-top: 20px;
 }
+.buttons button {
+    background-color: black;
+}
 
-.buttons a {
+.buttons a , .buttons button{
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
@@ -309,7 +336,7 @@ span {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.buttons a:hover {
+.buttons a:hover  , .buttons button:hover {
     background-color: rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
@@ -327,15 +354,62 @@ span {
     display: flex;
     flex-wrap: wrap; 
     flex-direction: row;
-    justify-content: fl ex-start; 
+    justify-content: flex-start; 
     align-items: center; 
     margin: 100px auto; 
     gap: 50px; 
     margin : 100px 300px;   
 }
+.detailContainer{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                0 0 30px rgba(0, 255, 255, 0.1),
+                0 0 40px rgba(0, 255, 255, 0.1),
+                0 0 50px rgba(0, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 20px;
 
 
+}
 
+
+.flex-p {
+    display: flex;
+    flex-direction: row;
+  }
+.flex-p p {
+
+    padding-right: 20px;
+}
+
+
+.videoPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .videoPlayer h2 {
+    margin-top: 20px;
+  }
+  
+  video {
+    width: 80%;
+    height: auto;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3),
+                0 0 40px rgba(0, 255, 255, 0.3),
+                0 0 50px rgba(0, 255, 255, 0.3);
+  }
 
 .skillBox
 {
@@ -352,6 +426,9 @@ span {
                 0 0 50px rgba(0, 255, 255, 0.3); 
     transition: box-shadow 0.3s ease-in-out;
 
+}
+footer {
+    text-align: center;
 }
 
 .skillBox img {
@@ -392,6 +469,10 @@ span {
                 0 0 50px rgba(0, 255, 255, 0.3);
 }
 
+strong {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+
+}
 
 .pdf-book {
     position: relative;
@@ -418,6 +499,15 @@ span {
     color: #ffffff;
 } 
 
+.download-link1 {
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px inset white;
+    margin-left: 80px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .first-download-link
 {
     position: absolute;
@@ -433,3 +523,68 @@ span {
     background-color: rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }   
+.download-link1:hover{
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+
+}
+
+.contact-page {
+    /* background: linear-gradient(91.9deg, rgb(93, 248, 219) 27.8%, rgb(33, 228, 246) 67%); */
+    color: #ffffff;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    max-width: 600px;
+    margin: 20px;
+}
+
+.contact-info {
+    font-size: 1.2rem;  
+    line-height: 2;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    color: rgba(0, 255, 255, 0.8);
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width:320px)
+{
+    
+}

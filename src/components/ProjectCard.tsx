@@ -1,10 +1,14 @@
 type cardprops = {
+    id:number,
     title : string,
     desc : string,
     img : string,
     git:string,
+    type:string,
     tools:string[]
 }
+
+
 
 export const Card = (props : cardprops)=>{
 
@@ -25,7 +29,8 @@ export const Card = (props : cardprops)=>{
                     ))}
                     <div className="buttons">
                     <a href={props.git}>GitHub</a>
-                    <a href="#">More Details</a>
+                    {/* <button >More Details</button> */}
+                    <a href={`/projectdetail/${props.id}/${props.type}`}>More Details</a>
                     </div>  
                 </div>
             </div>

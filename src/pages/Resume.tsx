@@ -1,10 +1,9 @@
-import React from 'react';
-import { Nav } from '../components/Header';
+
 
 export const Resume = () => {
     return (
         <div className="resume-page">
-            <Nav />
+    
 
 
             <div className="title">

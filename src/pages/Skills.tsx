@@ -1,4 +1,4 @@
-import { Nav } from "../components/Header"
+
 import { Skillc } from "../components/SkillsContainer"
 import { skillset , tools} from "../skills"
 export const Skill = ()=>{
@@ -6,7 +6,7 @@ export const Skill = ()=>{
     
     return(
         <div>
-            <Nav/>
+         
 
             <div className="title">
                 <p>SKILLS</p>
