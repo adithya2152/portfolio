@@ -25,7 +25,7 @@ export const Details: React.FC = () => {
           {allProjects[projectid].desc}
         </p>
         <p>
-            <strong>Type Of Project :</strong>
+            <strong>Type Of Project :</strong> <br />
             {allProjects[projectid].type === 'webdev' ? "WEB DEVELOPMENT" : "C/C++ PROJECTS"}
         </p>
         

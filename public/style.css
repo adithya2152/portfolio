@@ -5,13 +5,33 @@ body {
     height: 100vh;
 }  
 
-
+.active{
+    border-bottom: 2px dotted rgba(0, 255, 255, 0.9);
+}
 .nav_container {
     display:inline-flex;
     justify-content: flex-end;
     margin-left: 610px;
 }
 
+nav .menu{
+    position: absolute;
+    display: none;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+
+}
 nav h2 {
     display: inline;
 }
@@ -50,6 +70,10 @@ nav li {
                 0 0 40px rgba(0, 255, 255, 0.2),
                 0 0 50px rgba(0, 255, 255, 0.2);
 }
+nav ul.open{
+    display: flex;
+
+}                                                                                                                                                                                   
 
 .nav-item > a {
     text-decoration: none;
@@ -75,6 +99,38 @@ nav li {
 
 
 }
+
+@media (max-width:1000px){
+    nav .menu {
+        display: flex;
+    }
+    nav {
+        flex-direction: column;
+        align-items: start;
+        left:10px                                   
+
+    }
+
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom:0.25rem ;
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+    .nav_container
+    {
+        margin-left: 4rem;
+    }
+}
+
 
 .Home {
     position: relative;
@@ -120,7 +176,7 @@ nav li {
     top: 300px;
     left: 10%;
     font-size: 3rem;
-   color: #ffffff;
+    color: #ffffff;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3); /* Slightly lighter text shadow */
 }
 
@@ -382,6 +438,7 @@ span {
 
 .flex-p {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
   }
 .flex-p p {
@@ -586,5 +643,1071 @@ strong {
 
 @media only screen and (max-width:320px)
 {
+    nav h2 a {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav_container{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav li {
+        border:none;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                    0 0 30px rgba(0, 255, 255, 0.1),
+                    0 0 40px rgba(0, 255, 255, 0.1),
+                    0 0 50px rgba(0, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 0.01rem;
+        border: 1px solid white;
+    }
     
+    .active{
+        border:none;
+    }
+    
+    .nav-item:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+        border: 1px solid white;
+
+    }
+    .nav-item>a:hover{
+        text-shadow: none;
+    }
+    .Profile_photo
+    {
+        height: 18rem;
+        width: 18rem;
+        left:0.5rem;
+        top: 2.5rem;        
+    }
+    .Profile_photo >img{
+        height: 18rem;
+        width: 18rem;
+
+    }
+    .Intro{
+        font-size: 1.4rem;
+        top: 25rem;
+        left: 1rem;
+    }
+    .span{
+        padding-left: 0;
+    }
+    .info{
+        font-size: 1rem;
+    }
+
+    .title>p{
+        font-size: 1.5rem;
+        padding: 5px;
+        margin: 20px;
+    }
+    .subtitle>p{
+        font-size: 1rem;
+    }
+
+    .card{
+        height: 560px;
+        width:100%;
+
+    }
+
+    .card > img{
+        height: 150px;
+        width: 250px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1,1fr);
+        padding: 5px;
+    }
+
+    .project-details{
+        font-size: 1rem;
+    }
+
+    .hoveredDisplay p{
+        padding: 2px;
+        font-size: 1.25rem;
+    }
+    
+    .hoveredDisplay li {
+        font-size: 0.5rem;
+    }
+
+    .flex{
+        margin :2rem;
+    }
+    .skillBox{
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    .skillBox >img {
+        height: 3rem;
+        width: 3rem;
+    }
+    .resume-container{
+        /* display: none; */
+        left:10px;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 15rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 25%;
+        top: 20%;
+        padding: 10px;
+    }
+
+    .details_title h1{
+        font-size: 1.5rem;
+    }
+    .flex-p {
+        flex-direction: column;
+    }
+    .download-link1{
+        font-size: 0.58rem;
+        padding: 0.5rem;
+        margin-left: 10px;
+    }
+
+}
+
+@media only  screen  and (min-width:321px) and (max-width:626px){
+
+    nav h2 a {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav_container{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav li {
+        border:none;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                    0 0 30px rgba(0, 255, 255, 0.1),
+                    0 0 40px rgba(0, 255, 255, 0.1),
+                    0 0 50px rgba(0, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 0.01rem;
+        border: 1px solid white;
+    }
+    
+    .active{
+        border:none;
+    }
+    
+    .nav-item:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+        border: 1px solid white;
+
+    }
+    .nav-item>a:hover{
+        text-shadow: none;
+    }
+    .Profile_photo{
+        left: 10%;
+        top:5rem;
+        height: 18rem;
+        width: 18rem;
+    }
+    .Profile_photo > img {
+
+        height: 18rem;
+        width: 18rem;
+    }
+    .Intro{
+        font-size: 2rem;
+        left: 3%;
+        top: 360px;
+    }
+    span{
+        font-size: 80%;
+    }
+    .info{
+       
+        font-size: 70%;
+    }
+    .nav_container{
+        left:10px;
+    }
+    .title>p{
+        font-size: 1.75rem;
+        margin: 30px;
+    }
+    .subtitle>p
+    {
+        font-size: 1rem;
+    }
+    .card{
+        height:580px;
+        width:100%;
+    }
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        padding: 5px;
+    }
+
+    .project-details
+    {
+        font-size: 1.1rem;
+    }
+   
+    .hoveredDisplay p{
+        padding: 1px;
+        font-size: 1.5rem;
+    }
+    .hoveredDisplay li {
+        font-size: 0.5rem;
+    }
+    .flex{
+        margin: 2rem;
+    }
+    .skillBox{
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    .skillBox >img {
+        height: 3rem;
+        width: 3rem;
+    }
+    .resume-container{
+        /* display: none; */
+        left:5px;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 20rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 40%;
+        top: 20%;
+        padding: 10px;
+    }
+
+
+    .details_title h1{
+        font-size: 1.5rem;
+    }
+    .flex-p {
+        flex-direction: column;
+    }
+    .download-link1{
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width:627px) and (max-width:780px){
+
+    .Profile_photo{
+        left: 55%;
+        top:5rem;
+        height: 18rem;
+        width: 18rem;
+    }
+    .Profile_photo > img {
+
+        height: 18rem;
+        width: 18rem;
+    }
+    .Intro{
+        font-size: 2rem;
+        left: 3%;
+        top: 300px;
+    }
+    span{
+        font-size: 80%;
+    }
+    .info{
+       
+        font-size: 70%;
+    }
+
+
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav_container{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+    nav li {
+        border:none;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                    0 0 30px rgba(0, 255, 255, 0.1),
+                    0 0 40px rgba(0, 255, 255, 0.1),
+                    0 0 50px rgba(0, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 0.01rem;
+        border: 1px solid white;
+    }
+    
+    .active{
+        border:none;
+    }
+    
+    .nav-item:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+        border: 1px solid white;
+
+    }
+    .nav-item>a:hover{
+        text-shadow: none;
+    }
+
+
+    .title>p{
+        font-size: 1.75rem;
+        margin: 30px;
+    }
+    .subtitle>p
+    {
+        font-size: 1rem;
+    }
+    .card{
+        height:590px;
+        width:100%;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+        padding: 5px;
+    }
+
+    .project-details
+    {
+        font-size: 1.1rem;
+    }
+    .hoveredDisplay p{
+        padding: 1px;
+        font-size: 1.25rem;
+    }
+    .hoveredDisplay li {
+        font-size: 0.5rem;
+    }
+    .flex{
+        margin: 2rem;
+    }
+    .skillBox{
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    .skillBox >img {
+        height: 3rem;
+        width: 3rem;
+    }
+    .resume-container{
+        /* display: none; */
+        left:23%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 25rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 40%;
+        top: 20%;
+        padding: 10px;
+    }
+
+    .details_title h1{
+        font-size: 1.5rem;
+    }
+    .flex-p {
+        flex-direction: column;
+    }
+    .download-link1{
+        font-size: 1rem;
+        padding: 1rem;
+        margin-left: 150px;
+    }
+
+}
+
+@media (min-width:781px) and (max-width:900px)
+{
+    
+     
+    nav li {
+        padding: 2px;
+        margin-right: 10px;
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav_container{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+    nav li {
+        border:none;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                    0 0 30px rgba(0, 255, 255, 0.1),
+                    0 0 40px rgba(0, 255, 255, 0.1),
+                    0 0 50px rgba(0, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 0.01rem;
+        border: 1px solid white;
+    }
+    
+    .active{
+        border:none;
+    }
+    
+    .nav-item:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+        border: 1px solid white;
+
+    }
+    .nav-item>a:hover{
+        text-shadow: none;
+    }
+
+    .Profile_photo{
+        height:20rem;
+        width: 20rem;
+        left:60%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:20rem;
+        width: 20rem;   
+    }
+
+    .Intro{
+        font-size: 1.5rem;
+        left:5%;
+    }
+    .info{
+        font-size: 1.25rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:19%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+
+    .details_title h1{
+        font-size: 1.5rem;
+    }
+   
+    .download-link1{
+        font-size: 1rem;
+        padding: 1rem;
+        margin-left: 150px;
+    }
+
+
+}
+
+@media (min-width:901px) and (max-width:1000px)
+{
+
+    nav li {
+        padding: 2px;
+        margin-right: 10px;
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav_container{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+    nav li {
+        border:none;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                    0 0 30px rgba(0, 255, 255, 0.1),
+                    0 0 40px rgba(0, 255, 255, 0.1),
+                    0 0 50px rgba(0, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 0.01rem;
+        border: 1px solid white;
+    }
+    
+    .active{
+        border:none;
+    }
+    
+    .nav-item:hover {
+        transform: none;
+        box-shadow: none;
+        transition: none;
+        border: 1px solid white;
+
+    }
+    .nav-item>a:hover{
+        text-shadow: none;
+    }
+
+    .Profile_photo{
+        height:20rem;
+        width: 20rem;
+        left:60%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:20rem;
+        width: 20rem;   
+    }
+
+    .Intro{
+        font-size: 1.5rem;
+        left:5%;
+    }
+    .info{
+        font-size: 1.25rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:19%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+}
+
+@media (min-width:1001px) and (max-width:1100px)
+{
+    .nav_container{
+        margin-left: 320px;
+    }
+    nav ul{
+        width:10px
+    }
+    nav li {
+        padding: 3px;
+        margin-right: 5px;
+    }
+    .Profile_photo{
+        height:25rem;
+        width: 25rem;
+        left:60%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:25rem;
+        width: 25rem;   
+    }
+    .Intro{
+        left:10px;
+        top:229px;
+        font-size:2rem;
+    }
+    .info {
+        font-size: 1.25rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:25%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+
+}
+@media (min-width:1101px) and (max-width:1200px)
+{
+    .nav_container{
+        margin-left: 400px;
+    }
+    nav ul {
+        width:10px
+    }
+
+
+    nav li {
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .Profile_photo{
+        height:25rem;
+        width: 25rem;
+        left:60%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:25rem;
+        width: 25rem;   
+    }
+    .Intro{
+        left:50px;
+        top:229px;
+        font-size:2rem;
+    }
+    .info {
+        font-size: 1.25rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:30%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+}
+@media (min-width:1201px) and (max-width:1400px)
+{
+    .nav_container{
+        margin-left: 450px;
+    }
+
+    nav ul {
+        width:10px;
+    }
+    nav li {
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .Profile_photo{
+        height:25rem;
+        width: 25rem;
+        left:60%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:25rem;
+        width: 25rem;   
+    }
+    .Intro{
+        left:100px;
+        top:200px;
+        font-size:2rem;
+    }
+    .info {
+        font-size: 1.25rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:30%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+
+}
+@media (min-width:1401px) and (max-width:1500px)
+{
+    .nav_container{
+        margin-left: 100px;
+    }
+
+
+    .Profile_photo{
+        height:25rem;
+        width: 25rem;
+        left:70%;
+        top: 10rem;
+    }
+    .Profile_photo>img {
+        height:25rem;
+        width: 25rem;   
+    }
+    .Intro{
+        left:200px;
+        top:229px;
+        font-size:2.5rem;
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+
+    .title>p {
+        margin-top: 50px;
+        font-size: 1.75rem;
+    }
+    .subtitle>p{
+        font-size: 1.25rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .grid {
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+
+    }
+
+    .flex {
+        margin : 10px 10px;   
+        margin-left: 100px;
+
+    }
+    .skillBox{
+        width:10rem;
+        height: 10rem;
+    }
+
+    .skillBox > img {
+        width:5rem;
+        height:5rem;
+    }
+
+    .resume-container{
+        /* display: none; */
+        left:30%;
+        top: 50px;
+        margin: 10px;
+        height: 900px;
+        width: 35rem;
+    }
+   
+    .download-link{
+        display: none;
+    }
+    .first-download-link
+    {
+        position: relative;
+        left: 45%;
+        top: 25px;
+        padding: 10px;
+    }
+
+}
+
+@media (min-width:1500px) and (max-width:1650px)
+{
+    .nav_container{
+        margin-left: 250px;
+    }
+    .resume-container
+    {
+        left:20%;
+    }
+
+    .download-link{
+        left:700px;
+    }
 }
