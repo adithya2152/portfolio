@@ -29,6 +29,16 @@
             video:"/cc.mp4",
             report:""
         },
+        {
+            title: "GYMSYNC",
+            desc:`GymSync is a Full Stack Web app which is developed to book slots efficiently `,
+            img: "gymSync.png",
+            tools: ["VSCODE" , "HTML" , "CSS", "NextJS" , "PWA" , "PostgreSql" , "Supabase" , "Bcrypt"  ],
+            git: "https://github.com/adithya2152/Gym_slot_management",
+            type:"webdev",
+            video:"gymsync.mp4",
+            report:""
+        }
     ]
 
     export const cProjectsDetails = [
