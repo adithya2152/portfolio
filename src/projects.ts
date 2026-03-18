@@ -26,7 +26,7 @@
             tools : ["VSCODE" , "HTML" , "CSS", "NodeJS" , "ExpressJS" , "PostgreSql" , "Bcrypt"],
             git : "https://github.com/Pranav9347/CampusConnect",
             type:"webdev",
-            video:"/cc.mp4",
+            video:"https://youtu.be/q95e0xQsvlQ",
             report:""
         },
         {
